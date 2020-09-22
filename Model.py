@@ -45,7 +45,7 @@ def tuner(x_train,y_train,model_name,model):
 
         tune = RandomizedSearchCV(estimator=model,
                                    param_distributions=random_grid, scoring='neg_mean_squared_error',
-                                   n_iter=10, cv=5, verbose=2, random_state=42, n_jobs=1)
+                                   n_iter=2, cv=2, verbose=2, random_state=42, n_jobs=1)
         tune.fit(x_train,y_train)
 
         print(tune.best_params_)
@@ -56,15 +56,15 @@ def tuner(x_train,y_train,model_name,model):
 def build_rforest(xtrain,xtest,ytrain,ytest,tuned=True):
     if tuned:
         regressor = RandomForestRegressor()
-        regressor_tuned=tuner(x_train,y_train,'Random Forest',regressor)
+        regressor_updated=tuner(xtrain,ytrain,'Random Forest',regressor)
     else:
         regressor_updated = RandomForestRegressor()
 
-    predictions = regressor_updated.predict(x_test)
+    predictions = regressor_updated.predict(xtest)
 
-    plot_residue(y_test,predictions)
+    plot_residue(ytest,predictions)
 
-    e_mse, e_rmse, e_mae, e_r2, e_agg = metric(y_test, preds)
+    e_mse, e_rmse, e_mae, e_r2, e_agg = metric(ytest, predictions)
 
     model_save('flight_fare', regressor_updated)
 

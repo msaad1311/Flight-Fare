@@ -1,6 +1,6 @@
 import pandas as pd
 import os
-from IPython.display import display
+# from IPython.display import display
 from Utils import *
 from Train import *
 from Model import *
@@ -33,7 +33,7 @@ def main():
     train = dropper(train, ['Airline', 'Source', 'Destination', 'Dep_Duration', 'Arrival_Duration'])
 
     print('The final dataframe is:')
-    display(train.head())
+    # display(train.head())
 
     heatmap(train)
 
@@ -57,6 +57,9 @@ def main():
     feature_selector(x,y)
 
     build_model(x,y,0.2,'Random Forest')
+
+if __name__ == "__main__":
+    main()
 
 
 

@@ -1,10 +1,12 @@
 import pandas as pd
 import numpy as np
-from IPython.display import display
+# from IPython.display import display
 import holidays
 from math import sqrt
 import seaborn as sns
+import matplotlib.pyplot as plt
 
+from sklearn.ensemble import ExtraTreesRegressor
 from sklearn.metrics import mean_squared_error as mse
 from sklearn.metrics import mean_absolute_error as mae
 from sklearn.metrics import r2_score as r2
@@ -14,9 +16,9 @@ def read_file(path, dropna=True):
     df = pd.read_excel(p)
     if dropna:
         df.dropna(inplace=True)
-    display(df.head())
-    display(df.info())
-    display('The shape of the DataFrame is:', df.shape)
+    # display(df.head())
+    # display(df.info())
+    # display('The shape of the DataFrame is:', df.shape)
     return df
 
 
@@ -42,7 +44,7 @@ def journey(df):
     df_temp['Journey Weekend'] = np.where(((df_temp['Date_of_Journey']).dt.dayofweek) > 5, 1, 0)
     df_temp['Journey Week'] = df_temp['Date_of_Journey'].dt.week
 
-    display(df_temp.head())
+    # display(df_temp.head())
 
     return df_temp
 
@@ -74,7 +76,7 @@ def durations(df):
 
     df_temp = dropper(df_temp, ['Duration_min_scaled', 'Duration_hour', 'Duration_min'])
 
-    display(df_temp.head())
+    # display(df_temp.head())
 
     return df_temp
 
@@ -84,7 +86,7 @@ def stops(df):
     stops = {'non-stop': 0, '1 stop': 1, '2 stops': 2, '3 stops': 3, '4 stops': 4}
     df_temp['Total_Stops'] = df_temp['Total_Stops'].map(stops)
 
-    display(df_temp.head())
+    # display(df_temp.head())
 
     return df_temp
 
@@ -111,7 +113,7 @@ def times(df):
     df_temp['Arrival_Duration'] = df_temp['Arrival_Time1'].dt.hour.apply(timing) + '_arr'
 
     df_temp = dropper(df_temp, ['Arrival_Time1', 'Dep_Time', 'Arrival_Time'])
-    display(df_temp.head())
+    # display(df_temp.head())
 
     return df_temp
 
