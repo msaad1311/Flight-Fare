@@ -5,6 +5,7 @@
 * [Demo](#Demo)
 * [Overview](#Overview)
 * [Motivation](#Motivation)
+* [Tools Used](#Tools-Used)
 * [Installation](#Installation)
 * [Bug/Feature Request](##bug---feature-request)
 * [Future Work](#Future-Work)
@@ -22,6 +23,10 @@ The app is a Flask based web application that predicts the flight fare on the ba
 
 ## Motivation
 In today depleting economy and increasing inflation rate, saving holds a paramount importance for people across the globe. Therefore, having an outlook of the future price trend for different items will aid people in altering their purchasing strategy. This app caters this aspect. It predicts the fare of the flights on the basis of the itineray thereby, giving the expected fare to the user. This will help the user to determine whether the current actual fare is overpriced or underpriced enabling them to make a better informed decision. 
+
+## Tools Used
+
+[<img target="_blank" src="https://flask.palletsprojects.com/en/1.1.x/_images/flask-logo.png" width=170>](https://flask.palletsprojects.com/en/1.1.x/) [<img target="_blank" src="https://number1.co.za/wp-content/uploads/2017/10/gunicorn_logo-300x85.png" width=280>](https://gunicorn.org) [<img target="_blank" src="https://scikit-learn.org/stable/_static/scikit-learn-logo-small.png" width=200>](https://scikit-learn.org/stable/) 
 
 ## Installation
 
