@@ -22,7 +22,7 @@ The app of can be accessed via the following link:
 The app is a Flask based web application that predicts the flight fare on the basis of the itinerary provided. The prediction is done via Machine Learning algorithm. 
 
 ## Motivation
-In today depleting economy and increasing inflation rate, saving holds a paramount importance for people across the globe. Therefore, having an outlook of the future price trend for different items will aid people in altering their purchasing strategy. This app caters this aspect. It predicts the fare of the flights on the basis of the itineray thereby, giving the expected fare to the user. This will help the user to determine whether the current actual fare is overpriced or underpriced enabling them to make a better informed decision. 
+In today depleting economy and increasing inflation rate, saving holds a paramount importance for people across the globe. Therefore, having an outlook of the future price trend for different items will aid people in altering their purchasing strategy. This app caters this aspect. It predicts the fare of the flights on the basis of the itinerary thereby, giving the expected fare to the user. This will help the user to determine whether the current actual fare is overpriced or underpriced enabling them to make a better informed decision. 
 
 ## Tools Used
 
@@ -45,3 +45,8 @@ If you find a bug, kindly raise an [issue](https://github.com/msaad1311/Flight-F
 * Use multiple machine learning and deep learning algorithms.
 * Include more data to incorporate other countries.
 * Improve front end.
+
+## Acknowledgment 
+
+* [Krish Naik](https://github.com/krishnaik06)for his amazing tutorials. 
+* [Amar Mandal](https://github.com/Mandal-21/Flight-Price-Prediction)for the reference code.
