@@ -9,6 +9,7 @@
 * [Installation](#Installation)
 * [Bug/Feature Request](##bug---feature-request)
 * [Future Work](#Future-Work)
+* [Acknowledgment](#Acknowledgment)
 
 
 ## Demo
@@ -48,5 +49,5 @@ If you find a bug, kindly raise an [issue](https://github.com/msaad1311/Flight-F
 
 ## Acknowledgment 
 
-* [Krish Naik](https://github.com/krishnaik06)for his amazing tutorials. 
-* [Amar Mandal](https://github.com/Mandal-21/Flight-Price-Prediction)for the reference code.
+* [Krish Naik](https://github.com/krishnaik06) for his amazing tutorials. 
+* [Amar Mandal](https://github.com/Mandal-21/Flight-Price-Prediction) for the reference code.
